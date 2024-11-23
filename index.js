@@ -59,7 +59,7 @@ const productCollection = client.db("capStore").collection("products");
 
 const dbConnect = async () => {
   try {
-    client.connect();
+    await client.connect();
     console.log("DataBase connected successfully");
 
     // get user
