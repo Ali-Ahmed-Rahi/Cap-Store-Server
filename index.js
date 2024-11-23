@@ -9,8 +9,8 @@ const port = process.env.PORT || 3000;
 // middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    optionsSuccessStatus: 200,
+    origin: ["http://localhost:5173"],
+    // optionsSuccessStatus: 200,
   })
 );
 app.use(express.json());
@@ -59,7 +59,7 @@ const productCollection = client.db("capStore").collection("products");
 
 const dbConnect = async () => {
   try {
-    // client.connect();
+    client.connect();
     console.log("DataBase connected successfully");
 
     // get user
