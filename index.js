@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 // middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://cap-store-client.vercel.app"],
+    origin: ["http://localhost:5173","https://cap-store-client.vercel.app/"],
     // optionsSuccessStatus: 200,
   })
 );
@@ -59,7 +59,7 @@ const productCollection = client.db("capStore").collection("products");
 
 const dbConnect = async () => {
   try {
-    await client.connect();
+    // await client.connect();
     console.log("DataBase connected successfully");
 
     // get user
