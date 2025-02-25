@@ -89,6 +89,7 @@ const dbConnect = async () => {
       res.send(result);
     });
 
+    
     // get Products
     app.get("/all-products", async (req, res) => {
       const { title, sort, category, brand, page = 1, limit = 9 } = req.query;
